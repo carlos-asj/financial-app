@@ -7,7 +7,10 @@
     "services:stop": "docker compose -f infra/compose.yaml stop",
     "services:down": "docker compose -f infra/compose.yaml down",
     "test:watch": "jest --watchAll --verbose",
-    "test": "npm run services:up && jest --verbose"
+    "test": "npm run services:up && jest --verbose",
+    "lint:prettier:check": "prettier --check .",
+    "lint:prettier:fix": "prettier --write .",
+    "lint:eslint:check": "next lint --dir ."
   },
   "dependencies": {
     "dotenv": "^17.4.1",
@@ -17,6 +20,10 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "jest": "^30.3.0"
+    "eslint": "^10.2.0",
+    "eslint-config-next": "^16.2.3",
+    "eslint-config-prettier": "^10.1.8",
+    "jest": "^30.3.0",
+    "prettier": "^3.8.1"
   }
 }
