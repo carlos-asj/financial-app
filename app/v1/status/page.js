@@ -7,7 +7,6 @@ async function fetchAPI(key) {
     return responseBody;
 }
 
-
 export default function StatusPage() {
     return (
         <>

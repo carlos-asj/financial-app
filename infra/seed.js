@@ -7,7 +7,7 @@ async function seedDb(tableName) {
     try {
         const seedTable = await database.query(`
         CREATE TABLE IF NOT EXISTS ${tableName} (
-                transaction_id uuid PRIMARY KEY,
+                transaction_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
                 bank VARCHAR(100) NOT NULL,
                 value NUMERIC(8, 2) NOT NULL,
                 category VARCHAR(255),
