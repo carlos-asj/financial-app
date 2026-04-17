@@ -12,17 +12,25 @@
     "test": "npm run services:up && jest --verbose",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
-    "lint:eslint:check": "next lint --dir ."
+    "lint:eslint:check": "next lint --dir .",
+    "kill:port": "sudo kill -9 $(sudo lsof -t -i:5432)"
   },
   "dependencies": {
+    "@tamagui/config": "^2.0.0-rc.41",
+    "@tamagui/next-plugin": "^2.0.0-rc.41",
+    "@tamagui/react-native-media-driver": "^2.0.0-rc.41",
     "dotenv": "^17.4.1",
     "next": "^16.2.2",
     "pg": "^8.20.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "swr": "^2.4.1"
+    "swr": "^2.4.1",
+    "tamagui": "^2.0.0-rc.41"
   },
   "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "eslint": "^10.2.0",
     "eslint-config-next": "^16.2.3",
     "eslint-config-prettier": "^10.1.8",
